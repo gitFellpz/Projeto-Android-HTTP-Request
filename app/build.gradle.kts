@@ -30,6 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    android {
+        viewBinding {
+            enable = true
+        }
+    }
 }
 
 dependencies {
@@ -42,4 +48,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Livedata e ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+    // Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    // Retrofit para consumir webservices
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    // Componente de lista
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    // Extensoes para activity
+    implementation ("androidx.activity:activity-ktx:1.9.2")
+    // Glide para carregar as imagens a partir de uma url remota
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }
